@@ -1,7 +1,5 @@
 <html>
 <body>
-
-
 <?php
 
 $servername = "localhost";
