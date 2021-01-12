@@ -1,11 +1,15 @@
 <html>
 <head>
 <title>student Registration Form</title>
-<link rel="stylesheet" href="" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="registration_form.css">
 </head>
  
 <body>
-<h3>student REGISTRATION FORM</h3>
+	<div class="loginBox">
+        <img src="man.png" class="user">
+<h3>Student Registration Form</h3>
+
 
 
  <form method ="post" action="Registration.php">
@@ -15,59 +19,36 @@
 <table align="center" cellpadding = "10">
 
 <!----- First Name ---------------------------------------------------------->
-<tr>
-<td>usn</td>
-<td><input type="text" name="USN" maxlength="10" placeholder="a-z or A-Z"/>
-(Max 10 Characters)
-</td>
-</tr>
+<p>USN</p>
+<input type="text" name="USN" maxlength="10" placeholder="Max 10 Characters"/>
+ 
  
 <!----- Last Name ---------------------------------------------------------->
-<tr>
-<td>NAME</td>
-<td><input type="text" name="Name" maxlength="30" placeholder="a-z or A-Z"/>
-(Max 30 Characters)
-</td>
-</tr>
+<p>Name</p>
+<input type="text" name="Name" maxlength="30" placeholder="Max 30 Characters"/>
 
 <!----- User Name ---------------------------------------------------------->
-<tr>
-<td>branch</td>
-<td><input type="text" name="BRANCH" maxlength="30" placeholder="without spaces" />
-(Max 30 Characters)
-</td>
-</tr>
-<tr>
-<td>scheme</td>
-<td><input type="text" name="scheme" maxlength="30" placeholder="without spaces" />
-(Max 30 Characters)
-</td>
-</tr>
-<tr>
-<td>ssid</td>
-<td><input type="text" name="ssid" maxlength="30" placeholder="without spaces" />
-(Max 30 Characters)
-</td>
-</tr>
+<p>Branch</p>
+<input type="text" name="BRANCH" required="required" maxlength="30" placeholder="without spaces" />
 
 
-<tr>
-	<td> PASSWORD </td>
-	
-    <td> 
-        <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" />
-    </td>
+<!----- Password ---------------------------------------------------------->
+<p>Scheme</p>
+<input type="text" name="scheme" maxlength="30" placeholder="Max 30 Characters"/>
 
-</tr>
+
+<p>SSID</p>
+<input type="text" name="ssid" maxlength="30" placeholder="Max 30 Characters"/>
+
+<p>Password</p>
+<input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" />
  
 <!----- Date Of Birth -------------------------------------------------------->
 
  
 <!----- Email Id ---------------------------------------------------------->
-<tr><tr>
-<td>DATE OF BIRTH</td>
+<p>DATE OF BIRTH</p>
  
-<td>
 <select name="Birthday_day" id="Birthday_Day">
 <option value="-1">Day:</option>
 <option value="1">1</option>
@@ -163,30 +144,25 @@
 <option value="1970">1970</option>
 
 </select>
-</td>
-</tr>
-<td>EMAIL ID</td>
-<td><input type="text" name="Email_Id" maxlength="100" /></td>
-</tr>
+
+
+<p>EMAIL ID</p>
+<input type="text" name="Email_Id" maxlength="100" placeholder="@gmail"/>
+
  
 <!----- Mobile Number ---------------------------------------------------------->
-<tr>
-<td>MOBILE NUMBER</td>
-<td>
-<input type="text" name="phone_Number" maxlength="10" />
-(10 digit number)
-</td>
-</tr>
- 
+
+<p>MOBILE NUMBER</p>
+<input type="text" name="phone_Number" maxlength="10" placeholder="10 Digit Number"/>
+
 <!----- Gender ----------------------------------------------------------->
 
  
 <!----- Address ---------------------------------------------------------->
-<tr>
-<td>ADDRESS <br /><br /><br /></td>
-<td><textarea name="Address" rows="4" cols="30"></textarea></td>
-</tr>
- 
+<p>ADDRESS <br></p>
+<textarea name="Address" rows="4" cols="30"></textarea>
+<br>
+<br>
 
 
 <!----- Submit and Reset ------------------------------------------------->
@@ -206,6 +182,6 @@
  
 
 
-
+</div>
 </body>
 </html>

@@ -29,7 +29,7 @@ $address= $_POST['Address'];
 $sql = "INSERT INTO student_table(usn, Name,PhoneNumber,Branch, Address, Scheme, ssid) VALUES ('$usn', '$name','$phone', '$branch', '$address','$scheme','$ssid')";
 
 if ($conn->query($sql) === TRUE) {
-	echo "data in databse";
+	include('registered_page.php');
 	} else {
     echo "error" . $sql . "<br>" . $conn->error;
 }

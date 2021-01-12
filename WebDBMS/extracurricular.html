@@ -1,0 +1,72 @@
+<?php
+error_reporting(0); 
+?> 
+<?php
+$msg = ""; 
+
+// If upload button is clicked ... 
+if (isset($_POST['upload'])) { 
+
+	$filename = $_FILES["uploadfile"]["name"]; 
+	$tempname = $_FILES["uploadfile"]["tmp_name"];
+	$description= $_POST['description_entered'];
+	$usn= $_POST['USN'];
+	$name= $_POST['name'];
+
+	$semester=$_POST['Event'];
+
+
+
+		$folder = "extracurricular/".$filename; 
+		
+	$db = mysqli_connect("localhost", "root", "", "demo"); 
+
+		// Get all the submitted data from the form 
+		$sql = "INSERT INTO upload (description,filename) VALUES ('$description','$filename')"; 
+
+		// Execute query 
+		mysqli_query($db, $sql); 
+		
+		// Now let's move the uploaded image into the folder: image 
+		if (move_uploaded_file($tempname, $folder)) { 
+			$msg = "Image uploaded successfully"; 
+		}else{ 
+			$msg = "Failed to upload image"; 
+	} 
+} 
+$result = mysqli_query($db, "SELECT * FROM upload"); 
+?> 
+
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Image Upload</title> 
+<link rel="stylesheet" type= "text/css" href ="style.css"/> 
+<div id="content"> 
+
+<form method="POST" action="" enctype="multipart/form-data">
+ USN: <input type="text" name="USN"/><br><br>
+
+ Name: <input type="text" name="name"/><br>
+
+  Event Name <select name="Event " id="event">
+  <option value="1">paper presentation</option>
+  <option value="2">hackathon</option>
+  <option value="3">interships</option>
+  <option value="4">workshops</option>
+  <option value="5">certifications</option> <br>
+   
+</select>
+Description of EVENT: <input type="text" name="description_entered"/><br>
+	<input type="file" name="uploadfile" value=""/> 
+
+  
+  
+
+		
+	<div> 
+		<button type="submit" name="upload">UPLOAD semester markscard</button> 
+		</div> 
+</form> 
+</div> 
+</body>
