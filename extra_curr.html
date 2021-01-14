@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/bdd89edb33.js"></script>
+    <link rel="stylesheet" href="extra_curr.css" />
+    <title>Extra Curricular</title>
+  </head>
+  
+  <body>
+    <div class="collapse-content">
+      
+      
+      <div class="collapse" id="paper">
+        <a class="paper" href="#paper">
+          <i class="fas fa-clipboard"></i> Paper Presentation</a>
+        <div class="content">
+          <div class="inner-content" id="navbar">
+
+            <form  method="POST" action="paper.php" enctype="multipart/form-data">
+            USN: <input type="text" name="usn"/><br>
+          
+            <h4>Have you presented paper in a journal or conference?</h4>
+            
+            <input type="radio" name="whichpaper" value="journal" /> Journal
+            <input type="radio" name="whichpaper" value="conference" /> Conference <br>
+
+            
+              Paper Number: <input type="text" name="paper_no"/><br>
+              ISBN Number: <input type="text" name="ISBN_no"/><br>
+              <input type="file" name="uploadfile" value=""/><br>
+              <button type="submit" name="upload">Upload</button>
+            
+          </form>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="collapse" id="hackathon">
+        <a class="hackathon" href="#hackathon">
+          <i class="far fa-file-code"></i> Hackathon</a>
+        <div class="content">
+          <div class="inner-content">
+
+            <form  method="POST" action="hackathon.php" enctype="multipart/form-data">
+            <h3>Have you taken part in any Hackathon?</h3>
+
+            <input type="radio" name="hack" value="YES" /> YES
+            <input type="radio" name="hack" value="NO" /> NO
+            <br>
+            USN: <input type="text" name="usn"/><br>
+            Description: <input type="text" name="hack_desc"/><br>
+            Project Title: <input type="text" name="hack_title"/><br>
+            Hostname: <input type="text" name="hack_host"/><br>
+            <input type="file" name="uploadfile" value=""/><br>
+            <button type="submit" name="upload">certificate Upload</button>
+             </form>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="collapse" id="workshop">
+        <a class="workshop" href="#workshop"
+          ><i class="fas fa-keyboard"></i> Workshop</a
+        >
+        <div class="content">
+          <div class="inner-content">
+
+            <form  method="POST" action="extra_workshop.php" enctype="multipart/form-data">
+            <h3>Did you take part in any workshop?</h3>
+            <input type="radio" name="work" value="YES" /> YES
+            <input type="radio" name="work" value="NO" /> NO
+            <br>
+            USN: <input type="text" name="usn"/><br>
+            Name of workshop: <input type="text" name="work_name"/><br>
+            Description: <input type="text" name="work_desc"/><br>
+            <input type="file" name="uploadfile" value=""/><br>
+            <button type="submit" name="upload">Upload completion certificate</button>
+             </form>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="collapse" id="certificates">
+        <a class="certificates" href="#certificates"
+          ><i class="fas fa-quote-right"></i> Certificates</a
+        >
+        <div class="content">
+          <div class="inner-content">
+
+            <form  method="POST" action="certifications.php" enctype="multipart/form-data">
+            <h3>Have you completed any certifications?</h3>
+            USN: <input type="text" name="usn"/><br>
+            Paper Number: <input type="text" name="paper_no"/><br>
+            Title: <input type="text" name="cert_title"/><br>
+            <input type="file" name="uploadfile" value=""/><br>
+              <button type="submit" name="upload">Upload</button>
+            <br>
+             </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="collapse" id="internship">
+        <a class="internship" href="#internship"
+          ><i class="fas fa-chalkboard"></i> Internships</a
+        >
+        <div class="content">
+          <div class="inner-content">
+
+            <form  method="POST" action="internship.php" enctype="multipart/form-data">
+            <h3>Have you worked in any Internships?</h3>
+            <input type="radio" name="intern" value="YES" /> YES
+            <input type="radio" name="intern" value="NO" /> NO<br>
+            USN: <input type="text" name="usn"/><br>
+            Company: <input type="text" name="intern_comp"/><br>
+            Description: <input type="text" name="intern_desc"/><br>
+            <input type="file" name="uploadfile" value=""/><br>
+              <button type="submit" name="upload">Upload</button>
+            <br>
+             </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

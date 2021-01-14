@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://kit.fontawesome.com/bdd89edb33.js"></script>
+    <link rel="stylesheet" href="co_curr.css" />
+    <title>Co Curricular</title>
+  </head>
+  
+  <body>
+    <div class="collapse-content">
+      
+      
+      <div class="collapse" id="co_work">
+        <a class="co_work" href="#co_work">
+          <i class="fas fa-poll-h"></i> Workshop</a>
+        <div class="content">
+          <div class="inner-content" id="navbar">
+
+            <form  method="POST" action="co_workshop.php" enctype="multipart/form-data">
+            <h4>Have you Attended a workshop?</h4>
+            
+            <input type="radio" name="workshop" value="YES" /> YES
+            <input type="radio" name="workshop" value="NO" /> NO<br>
+            USN: <input type="text" name="usn"/><br>
+              Title: <input type="text" name="title"/><br>
+
+              Description: <input type="text" name="description"/><br>
+            
+          </form>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="collapse" id="creative">
+        <a class="creative" href="#creative">
+          <i class="fas fa-icons"></i> Creative Assessment</a>
+        <div class="content">
+          <div class="inner-content">
+             <form  method="POST" action="co_ca.php" enctype="multipart/form-data">
+            <h3>Have you done any Creative Assessment?</h3>
+
+            <input type="radio" name="creat" value="YES" /> YES
+            <input type="radio" name="creat" value="NO" /> NO
+            <br>
+            Title: <input type="text" name="CA_title"/><br>
+            Description: <input type="text" name="CA_desc"/><br>
+             </form>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="collapse" id="seminar">
+        <a class="seminar" href="#seminar"
+          ><i class="fal fa-users"></i></i> Seminars</a
+        >
+        <div class="content">
+          <div class="inner-content">
+             <form  method="POST" action="co_seminar.php" enctype="multipart/form-data">
+            <h3>Did you attend any Seminars?</h3>
+            <input type="radio" name="sem" value="YES" /> YES
+            <input type="radio" name="sem" value="NO" /> NO
+            <br>
+            Name of Seminar: <input type="text" name="sem_name"/><br>
+            Description: <input type="text" name="sem_desc"/><br>
+             </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
